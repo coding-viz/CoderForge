@@ -2,9 +2,22 @@
     margin: 0;
     padding: 0;
 }
-
+*{
+    box-sizing: border-box;
+}
+main{
+    padding: 1px 0;
+}
+div{
+margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+}
 body {
-    background-color: aqua;
+    background-color: #FFFFFF;
     color: black;
     font-family:  Open Sans, sans-serif;
 }
@@ -298,4 +311,85 @@ body.dark-mode .sign-in-btn {
 body.dark-mode .sign-in-btn:hover {
     background-color: #267d3d; /* Dark mode background color for sign-in button on hover */
     border-color: #267d3d; /* Dark mode border color for sign-in button on hover */
+}
+body.dark-mode .home-intro h1{
+    color: #fff;
+    }
+
+body.dark-mode .home-intro p{
+color: #fff;
+}
+body.dark-mode .home-intro p a {
+    color: #fff;
+}
+
+
+
+/*Main Page Data */
+.home-intro{
+    position:relative;
+    overflow: hidden;
+}
+.home-intro::before{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    display: block;
+    background: #6E6BFE;
+    border-radius: 50%;
+    box-shadow: 0 0 1000px 350px #6E6BFE;
+    z-index: -1;
+    right: 0;
+    top: 100%;
+    transform: translate(-80%, -80%);
+    opacity: .2;
+}
+.home-intro::after{
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    display: block;
+    background: #1BA94C;
+    border-radius: 50%;
+    box-shadow: 0 0 1000px 350px #1BA94C;
+    z-index: -1;
+    left: 0;
+    top: 100%;
+    transform: translate(-80%, -80%);
+    opacity: .2;
+}
+.home-intro .home-container{
+    padding: 60px 0;
+    margin: 0 auto;
+    max-width: 1180px;
+
+}
+.home-intro h1{
+    font-size: 64px;
+    font-weight: 900;
+    max-width: 780px;
+    margin: 0 auto;
+    line-height: 1.2;
+    color: #1F1F20;
+    text-align: center;
+    text-transform: none;
+    letter-spacing: normal;
+    text-indent: 0;
+}
+.home-intro p{
+    line-height: 1.5;
+    margin: 36px auto 0;
+    color: #39424E;
+    text-align :center;
+    
+}
+.home-intro p:first-child{
+    font-size: 18px;
+    max-width: 620px;
+    font-weight: 300
+}
+.home-intro p{
+    font-size: 18px;
 }
