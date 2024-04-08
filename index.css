@@ -1,0 +1,319 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: aqua;
+    color: black;
+    font-family:  Open Sans, sans-serif;
+}
+
+#header {
+    padding: 0;
+    margin: 0;
+}
+
+.hr-site {
+    padding: 2.462em 0 2.308em;
+    width: 100%;
+    min-height: 10em;
+    padding-top: 0;
+}
+.hr-ribbon{
+    background: green;
+    color: #FFF;
+    position: relative;
+    font-weight: bold;
+}
+.hr-ribbon .container{
+    display: block;
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.hr-ribbon .container a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+}
+.header-top {
+    height: 40px;
+    background: #050C1B linear-gradient(90deg, #050C1B, #1A4055 15%, #1A4055 35%, #050C1B 50%) repeat-x;
+}
+
+.hr-site #sticky {
+    background-color: #ffffff;
+    position: relative;
+}
+
+.hr-site #sticky .hr-nav-wrap {
+    background-color: #ffffff;
+}
+
+.hr-site .hr-container {
+    padding: 1em;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hr-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.hr-site .site-logo {
+    display: flex;
+    align-items: center;
+}
+
+.hr-site .site-logo a {
+    display: block;
+    max-width: 12.923em;
+    padding-bottom: 5px;
+    outline: none;
+    font-size: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active,
+a:target,
+a:focus,
+a:visited {
+    color: #39424e
+}
+
+.hr-nav-menu {
+    width: calc(100% - 250px);
+}
+
+.hr-nav-menu-containt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hr-site .menu-nav-main-container {
+    display: flex;
+    align-items: center;
+}
+
+.main-menu-nav {
+    font-size: 14px;
+    line-height: 1.3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center; /* Aligns list items horizontally center */
+}
+
+ul {
+    list-style-type: none;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-item a {
+    display: block;
+    padding: 10px 20px;
+    font-weight: bold; /* Make the text bold */
+    text-decoration: none;
+    color: black;
+}
+
+.menu-item a:hover {
+    background-color: #ccc; /* Change background color on hover */
+    border-radius: 5px; /* Add border-radius for rounded corners */
+    transition: background-color 0.3s ease; /* Add transition for smooth hover effect */
+}
+
+.additional-div {
+    display: flex;
+}
+
+.left-div {
+    flex: 1;
+    position: absolute;
+    top: 0;
+    right: 15px;
+    margin-top: -38px;
+    color: #fff;
+}
+
+.left-menu {
+    display: flex;
+    padding: 9px 0;
+}
+.left-menu  li{
+    line-height: 1.538em;
+    font-weight: 400;
+    margin-bottom: 0;
+    color: #576871;
+    font-size: 13px;
+}
+.left-menu li a{
+    font-size: 14px;
+    color: #B7C9CC;
+    position: relative;
+    padding: 0 20px !important;
+    text-decoration: none;
+}
+.left-menu li a:hover{
+    color: #fff;
+
+}
+
+.right-div {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 5px;
+}
+
+.sign-in-btn {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 2px solid #39AC4C;
+    color: #39AC4C;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sign-in-btn:hover {
+    background-color: #39AC4C;
+    color: #fff;
+}
+/*dark mood toogleswicth*/
+body.dark-mode {
+    background-color: #1F202A;
+    color: #FFF;
+}
+
+/* Additional styles for dark mode */
+body.dark-mode .header-top {
+    background: #1F202A;
+}
+
+body.dark-mode .main-menu-nav .menu-item a {
+    color: #FFF;
+}
+body.dark-mode .hr-site #sticky{
+    background-color: #0E141E;
+}
+body.dark-mode .hr-site #sticky .hr-nav-wrap{
+    background-color: #0E141E;
+}
+
+/* Additional styles for slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+  margin-left: 10px; /* Adjust as needed */
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 20px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.slider-icon.left-icon {
+     /* Color of the icon */
+    font-size: 16px; /* Adjust the size of the icon */
+    margin-right: -5px; /* Adjust the spacing between the icon and the switch */
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slider-icon.right-icon {
+     /* Color of the icon */
+    font-size: 16px; /* Adjust the size of the icon */
+    margin-right: -5px; /* Adjust the spacing between the icon and the switch */
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Additional styles for sign-in button in dark mode */
+body.dark-mode .sign-in-btn {
+    background-color: #0E141E; /* Dark mode background color for sign-in button */
+    border-color: #39AC4C; /* Dark mode border color for sign-in button */
+    color: #FFF; /* White text color for sign-in button */
+}
+
+body.dark-mode .sign-in-btn:hover {
+    background-color: #267d3d; /* Dark mode background color for sign-in button on hover */
+    border-color: #267d3d; /* Dark mode border color for sign-in button on hover */
+}

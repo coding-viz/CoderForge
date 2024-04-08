@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CF Test-2</title>
+    <link rel="stylesheet" href="index.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+
+<body>
+    <div class="site">
+        <header id="header-CF" class="hr-site">
+            <div class="hr-ribbon">
+                <div class="container"><a href="#">Important Notice : </a></div>
+            </div>
+            <div class="header-top"> </div>
+            <div id="sticky" class="header-bottom">
+                <div class="hr-nav-wrap">
+                    <div class="hr-container">
+                        <nav id="site-navigation" class="hr-nav">
+                            <div class="site-logo">
+                                <a href="#" title="CoderForge"><img width="100%" height="36"
+                                        src="Images/Coder Forge.png"></a>
+                            </div>
+                            <div class="hr-nav-menu">
+                                <div class="hr-nav-menu-containt">
+                                    <div class="menu-nav-main-container">
+                                        <ul id="main-menu-nav" class="main-menu-nav">
+                                            <li>
+                                                <div class="menu-item"><a href="#">Programs</a></div>
+                                            </li>
+                                            <li>
+                                                <div class="menu-item"><a href="#">Practice</a></div>
+                                            </li>
+                                            <li>
+                                                <div class="menu-item"><a href="#">About</a></div>
+                                            </li>
+                                            <li>
+                                                <div class="menu-item"><a href="#">Contact</a></div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="additional-div">
+                                        <div class="left-div">
+                                            <ul id="left-menu" class="left-menu">
+                                                <li>
+                                                    <a href="#">Contact us </a>
+                                                </li>
+                                                <li><a href="#">|</a></li>
+                                                <li><a href="#"> Log in </a></li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="right-div">
+                                            <button class="sign-in-btn">Sign In</button>
+                                            <span class="slider-icon left-icon"><i class='bx bxs-sun'></i></span>
+                                            <label class="switch">
+                                                <input type="checkbox" onclick="toggleDarkMode()">
+                                                <span class="slider"></span>
+                                            </label>
+                                            <span class="slider-icon right-icon"><i class='bx bxs-moon'></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+    <script>
+        function toggleDarkMode() {
+            var body = document.body;
+            body.classList.toggle("dark-mode");
+        }
+        // JavaScript code to toggle dark mode and change logo image
+function toggleDarkMode() {
+    var body = document.body;
+    var logoImage = document.querySelector('.site-logo img');
+
+    body.classList.toggle('dark-mode'); // Toggle dark mode class on body
+
+    // Check if dark mode is activated
+    if (body.classList.contains('dark-mode')) {
+        // Change the logo image source to the dark mode logo image
+        logoImage.src = "CoderForge/Images/Coder Forge (1).png"; // Replace 'dark-mode-logo.png' with the path to your dark mode logo image
+        
+    } else {
+        // Change the logo image source back to the original logo image
+        logoImage.src = "Images/Coder Forge.png"; // Replace 'original-logo.png' with the path to your original logo image
+        
+    }
+}
+
+    </script>
+</body>
+
+</html>
