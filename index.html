@@ -48,12 +48,14 @@
                                                     <a href="#">Contact us </a>
                                                 </li>
                                                 <li><a href="#">|</a></li>
-                                                <li><a href="#"> Log in </a></li>
+                                                <!-- login -->
+                                                <li>  <a  href="#" id="loginButton" onclick="openPopup()" class="bt"><span>Log In</span></a></li>
+
 
                                             </ul>
                                         </div>
                                         <div class="right-div">
-                                            <button class="sign-in-btn">Sign In</button>
+                                            <button class="sign-in-btn" id="signupButton" onclick="openSignupPopup()" class="bt">Sign In</button>
                                             <span class="slider-icon left-icon"><i class='bx bxs-sun'></i></span>
                                             <label class="switch">
                                                 <input type="checkbox" onclick="toggleDarkMode()">
@@ -80,7 +82,7 @@
                                 <div class="home-intro-text">
                                     <p>Lorem ipsum dolor sit amet, conse</p>
                                     <p>
-                                        <a href="#">Sign up</a>
+                                        <a href="#"  id="signupButton" onclick="openSignupPopup()" class="bt">Sign up</a>
                                         <a href="#">Take Trial</a>
                                     </p>
                                 </div>
@@ -91,7 +93,103 @@
             </main>
         </div>
     </div>
+    <!-- Login Popup -->
+ <div id="loginPopup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <form action="">
+            <h2>Login</h2>
+            <div class="input-box">
+                <input type="text" placeholder="Username" name="username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Password" name="Password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Remember me</label>
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn1"><span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Login
+            </button>
+            <div class="register-link">
+                <p>Don't have an account? <a href="#" onclick="openSignupPopup()">Sign Up here.</a></p>
+            </div>
+            
+        </form>
+    </div>
+</div> 
+   
+        <!-- Sign-Up Popup -->
+<div id="signupPopup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closeSignupPopup()">&times;</span>
+        <form action="">
+            <h2>Sign Up</h2>
+            <div class="input-box">
+                <input type="text" placeholder="Username" name="username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Password" name="Password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" placeholder="Phone Number" name="Phone No." required>
+                <i class='bx bxs-phone'></i>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox">Remember me</label>
+            </div>
+            <!-- Add your sign-up form fields here -->
+            <button type="submit" class="btn1"><a href="#"><span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Sign Up
+                </a>
+            </button>
+            <div class="register-link">
+                <p>Already have an account? <a href="#" onclick="openPopup()">Log In</a></p>
+            </div>
+        </form>
+    </div>
+</div>
     
+ <!-- JavaScript for popup functionality -->
+ <script>
+    function toggleDarkMode() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+    }
+
+    function openPopup() {
+    document.getElementById("loginPopup").style.display = "block";
+    document.getElementById("signupPopup").style.display = "none"; // Close sign-up form
+}
+
+    function closePopup() {
+        document.getElementById("loginPopup").style.display = "none";
+    }
+
+<!-- JavaScript for sign-up popup functionality -->
+
+function openSignupPopup() {
+    closePopup(); // Close the login form
+    document.getElementById("signupPopup").style.display = "block";
+    
+}
+
+    function closeSignupPopup() {
+        document.getElementById("signupPopup").style.display = "none";
+    }
+</script>
+
     <script>
         function toggleDarkMode() {
             var body = document.body;
