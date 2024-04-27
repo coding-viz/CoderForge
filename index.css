@@ -5,6 +5,9 @@
 *{
     box-sizing: border-box;
 }
+
+
+
 main{
     padding: 1px 0;
 }
@@ -19,7 +22,8 @@ margin: 0;
 body {
     background-color: #FFFFFF;
     color: black;
-    font-family:  Open Sans, sans-serif;
+    font-family:  Open sans, sans-serif;
+  
 }
 body.header-sticky .hr-site
     {
@@ -40,7 +44,7 @@ body.header-sticky .hr-site
 .hr-site {
     padding: 2.462em 0 2.308em;
     width: 100%;
-    min-height: 10em;
+    min-height: 0;
     padding-top: 0;
 }
 .header-top {
@@ -322,9 +326,9 @@ body.dark-mode .sign-in-btn:hover {
     background-color: #267d3d; /* Dark mode background color for sign-in button on hover */
     border-color: #267d3d; /* Dark mode border color for sign-in button on hover */
 }
-body.dark-mode .home-intro h1{
-    color: #fff;
-    }
+body.dark-mode .home-intro{
+  background-color: #1F1F20;
+}
 
 body.dark-mode .home-intro p{
 color: #fff;
@@ -336,58 +340,60 @@ body.dark-mode .home-intro p a {
 
 
 /*Main Page Data */
-.home-intro{
-    position:relative;
-    overflow: hidden;
-}
-.home-intro::before{
-    content: '';
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    display: block;
-    background: #6E6BFE;
-    border-radius: 50%;
-    box-shadow: 0 0 1000px 350px #6E6BFE;
-    z-index: -1;
-    right: 0;
-    top: 100%;
-    transform: translate(-80%, -80%);
-    opacity: .2;
-}
-.home-intro::after{
-    content: '';
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    display: block;
-    background: #1BA94C;
-    border-radius: 50%;
-    box-shadow: 0 0 1000px 350px #1BA94C;
-    z-index: -1;
-    left: 0;
-    top: 100%;
-    transform: translate(-80%, -80%);
-    opacity: .2;
-}
-.home-intro .home-container{
-    padding: 60px 0;
-    margin: 0 auto;
-    max-width: 1180px;
 
+/* Styles for home page */
+.home-intro {
+  background: #f3f3f3;
+  padding: 20vh 0;
 }
-.home-intro h1{
-    font-size: 64px;
-    font-weight: 900;
-    max-width: 780px;
-    margin: 0 auto;
-    line-height: 1.2;
-    color: #1F1F20;
-    text-align: center;
-    text-transform: none;
-    letter-spacing: normal;
-    text-indent: 0;
+
+.home-intro-title {
+  font-size: 64px;
+  font-weight: 900;
+  max-width: 780px;
+  margin: 0 auto;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: none;
+  letter-spacing: normal;
+  text-indent: 0;
+  /* Define a gradient background */
+  background: linear-gradient(90deg, #6E6BFE, #1BA94C);
+  /* Set background size to cover */
+  background-size: 200% auto;
+  /* Add animation for color change */
+  animation: gradientChange 5s ease infinite;
+  /* Use text fill background to show gradient through text */
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* Set transparent text to appear when gradient is not supported */
+  color: transparent;
 }
+
+/* Define keyframes for gradient change */
+@keyframes gradientChange {
+  0% {
+      background-position: 0% center;
+  }
+  50% {
+      background-position: 100% center;
+  }
+  100% {
+      background-position: 0% center;
+  }
+}
+
+.home-intro-subtitle {
+  font-size: 24px;
+  font-weight: 400;
+  max-width: 780px;
+  margin: 20px auto;
+  line-height: 1.5;
+  text-align: center;
+  color: #444;
+}
+
+
 .home-intro p{
     line-height: 1.5;
     margin: 36px auto 0;
@@ -403,7 +409,82 @@ body.dark-mode .home-intro p a {
 .home-intro p{
     font-size: 18px;
 }
-/* Popup styles */
+.home-intro a:first-child{
+  text-decoration:  none;
+  font-size: 14px;
+  color: #fff;
+  border: 1px solid #068932;
+  background: #068932;
+  margin-top: 0;
+  margin-bottom: 32px;
+  margin: 0 10px 0;
+  width: auto;
+  border-radius: 4px;
+  font-weight: 600;
+  line-height: 25px;
+  padding: 10px 16px;
+  display: inline-block;
+  max-width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  min-width: 155px;
+}
+.home22-intro {
+  position: relative;
+  overflow: hidden;
+}
+
+.home22-intro a{
+  text-decoration:  none;
+  font-size: 14px;
+  color: #39424E;
+  border: 1px solid #39424E;
+  margin-top: 0;
+  margin-bottom: 32px;
+  margin: 0 10px 0;
+  width: auto;
+  border-radius: 4px;
+  font-weight: 600;
+  line-height: 25px;
+  padding: 10px 16px;
+  display: inline-block;
+  max-width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  min-width: 155px;
+}
+.home22-intro:before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  display: block;
+  background: #6E6BFE;
+  border-radius: 50%;
+  box-shadow: 0 0 1000px 350px #6E6BFE;
+  z-index: -1;
+  right: 0;
+  top: 100%;
+  transform: translate(-80%, -80%);
+  opacity: .2;
+}
+.home-intro:after {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  display: block;
+  background: #1BA94C;
+  border-radius: 50%;
+  box-shadow: 0 0 1000px 350px #1BA94C;
+  z-index: -1;
+  left: 0;
+  top: 100%;
+  transform: translate(80%, -80%);
+  opacity: .2;
+}
+
+/* login Popup styles */
 .popup {
     display: none;
     justify-content: center;
@@ -414,7 +495,7 @@ body.dark-mode .home-intro p a {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.5);
   }
-  
+
   .popup-content {
     width: 420px;
     background-color: transparent;
@@ -636,3 +717,55 @@ body.dark-mode .home-intro p a {
           bottom: 100%;
       }
   }
+  /* footer */
+  .hr-site-footer {
+    padding: 3.846em 0; 
+    background-color: #1F1F20;
+    display: block;
+  }
+  body.header-sticky .footer-container{
+    padding-top:0 ;
+  }
+
+  .hr-site-footer .footer-container{
+    width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+.footer-container{
+  margin-left: auto;
+  margin-right: auto;
+}
+.footer-gap{
+  min-height: 40px;
+}
+.hr-site-footer #footer-menu{
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.hr-site-footer #footer-menu> .footer-menu-item:first-child{
+  margin-right: 3.077rem;
+  color: #fff;
+}
+.hr-site-footer .footer-menu-item{
+  line-height: 1.538rem;
+
+}
+.footer-menu-item li{
+  width: 365px;
+  color: #576357;
+  font-size: 15px;
+}
+.footer-menu-item  a {
+  text-decoration: none;
+  color: #FFF;
+}
+.footer-menu-item ul a:hover{
+  color: #1BA94C;
+}
+
+
+
+
+/*main page header*/
